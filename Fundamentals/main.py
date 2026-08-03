@@ -93,11 +93,11 @@ def ROI():
                 case 2:
                     report.StudentReportGenerator()
                 case 3:
-                    report.AllStudentReport()
+                    report.Student_Report_Spreadsheet("all")
                 case 4:
-                    report.FailedStudentReport()
+                    report.Student_Report_Spreadsheet("fail")
                 case 5:
-                    report.PassStudentReport()
+                    report.Student_Report_Spreadsheet("pass")
                 case 6:
                     print("Exiting the Report Management System.....")
                 case _:

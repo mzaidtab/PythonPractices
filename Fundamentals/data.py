@@ -1,7 +1,5 @@
 import json
 
-Students_Record = []
-
 courses = (
     "Programming Fundamentals",
     "OOP Programming",
@@ -18,6 +16,8 @@ def load_data():
             return json.load(file)
     except FileNotFoundError:
         return []
+    
+Students_Record = load_data()
 
 def save_data(students):
     try:
@@ -30,11 +30,10 @@ def save_data(students):
             
     
 
-def add_student(students):
-    if students:
-        Students_Record.append(students)
-        save_data(Students_Record)
-        return True
-    return False
+def add_student(student):
+    Students_Record.append(student)
+    save_data(Students_Record)
+    return True
+    
     
     
